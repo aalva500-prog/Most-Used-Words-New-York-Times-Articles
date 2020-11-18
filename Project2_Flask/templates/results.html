@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results - Project 2</title>
+    <link rel="stylesheet" type= "text/css" href="static/project2.css">
+</head>
+<body>
+    <div class="header">
+        <h2>Hello {{ first_name }} {{ last_name }}</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="column side"></div>
+            <div class="column middle">
+                {% if valid == False %}
+                <p>The year has to be greater than or equal to 1851.</p>
+                <p>Please go back and search again for a different year.</p>
+                {% else %}
+                    <h3>Your results are the following:</h3>
+                    <p>There were a total of <b>{{ no_articles }}</b> New York Times articles in
+                        {% if month == "1" %}
+                            January,
+                        {% elif month == "2" %}
+                            February,
+                        {% elif month == "3" %}
+                            March,
+                        {% elif month == "4" %}
+                            April,
+                        {% elif month == "5" %}
+                            May,
+                        {% elif month == "6" %}
+                            June,
+                        {% elif month == "7" %}
+                            July,
+                        {% elif month == "8" %}
+                            August,
+                        {% elif month == "9" %}
+                            September,
+                        {% elif month == "10" %}
+                            October,
+                        {% elif month == "11" %}
+                            November,
+                        {% else %}
+                            December,
+                        {% endif %}
+                        {{ year }}.
+                    </p>
+
+                    <h3>The 10 most used words were:</h3>
+                    <ol>
+                        {% for word in most_common_words %}
+                            <li>{{ word }}</li>
+                        {% endfor %}
+                    </ol>
+                {% endif %}
+            </div>
+            <div class="column side"></div>
+        </div>
+        <footer class="footer">
+            <p>FIU - Fall 2020</p>
+            <p>Copyright © Aaron Alvarez</p>
+        </footer>
+    </div>
+</body>
+</html>

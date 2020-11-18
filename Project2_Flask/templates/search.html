@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project 2 - Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='project2.css')}}">
+</head>
+<body>
+    <div class="header">
+        <h2>Project 2: COP 4813 - Web Application Programming</h2>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="column side"></div>
+            <div class="column middle">
+                <h3>The Archive API </h3>
+                <p>This app uses the Archive API from the New York Times Developers website
+                    to search NYT articles for a given month and year.</p>
+                <h4>Search Form:</h4>
+                <form action="" method="post" name="archive">
+                    {{ form.csrf_token}}
+                    {{ form.hidden_tag() }}
+                    <p>
+                        First Name:
+                        {{ form.first_name() }}
+                    </p>
+                    <p>
+                        Last Name:
+                        {{ form.last_name() }}
+                    </p>
+                    <p>
+                        Enter Year:
+                        {{ form.year() }}
+                    </p>
+                    <p>
+                        Select Month:
+                        {{ form.month() }}
+                    </p>
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+            <div class="column side"></div>
+        </div>
+        <footer class="footer">
+            <p>FIU - Fall 2020</p>
+            <p>Copyright © Aaron Alvarez</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.row{
+   padding-bottom: 2.5rem;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+  margin: 0;
+  background-color: lightblue;
+}
+
+/* Style the header */
+.header {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: navy;
+  background-color: lightyellow;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: lightyellow;
+  text-align: center;
+  font-size: 12px;
+  color: navy;
+  height: 60px;
+  padding: 1px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

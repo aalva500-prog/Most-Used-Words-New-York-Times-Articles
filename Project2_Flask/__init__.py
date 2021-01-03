@@ -2,6 +2,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'cop4813'
+app.config['SECRET_KEY'] = 'your-secret-key-goes-here'
 
 from Project2_Flask import routes

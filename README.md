@@ -1,7 +1,7 @@
-# Author: Aaron Alvarez
-# Purpose: The goal of this project is to create a Web application using Python, Flask framework, HTML, CSS, the New York Times API and JSON documents to transmit data across the network.
+## Author: Aaron Alvarez
+### Purpose: The goal of this project is to create a Web application using Python, Flask framework, HTML, CSS, the New York Times API and JSON documents to transmit data across the network.
 
-## Video Walkthrough
+### Video Walkthrough
 
 Here's a walkthrough of the app:
 
